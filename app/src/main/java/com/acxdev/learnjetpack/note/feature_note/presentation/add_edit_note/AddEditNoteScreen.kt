@@ -63,11 +63,13 @@ fun AddEditNoteScreen(
     LaunchedEffect(key1 = true) {
         viewModel.eventFlow.collectLatest { event ->
             when(event) {
+                is AddEditNoteViewModel.UiEvent.ShowSnackBar -> {
+                    scaffoldState.snackbarHostState.showSnackbar(
+                        message = event.message
+                    )
+                }
                 is AddEditNoteViewModel.UiEvent.SaveNote -> {
                     navController.navigateUp()
-                }
-                is AddEditNoteViewModel.UiEvent.ShowSnackBar -> {
-                    scaffoldState.snackbarHostState.showSnackbar(message = event.message)
                 }
             }
         }
@@ -100,7 +102,6 @@ fun AddEditNoteScreen(
             ) {
                 Note.noteColors.forEach { color ->
                     val colorInt = color.toArgb()
-
                     Box(
                         modifier = Modifier
                             .size(50.dp)
@@ -111,9 +112,8 @@ fun AddEditNoteScreen(
                                 width = 3.dp,
                                 color = if (viewModel.noteColor.value == colorInt) {
                                     Color.Black
-                                } else {
-                                    Color.Transparent
-                                }
+                                } else Color.Transparent,
+                                shape = CircleShape
                             )
                             .clickable {
                                 scope.launch {
@@ -154,10 +154,9 @@ fun AddEditNoteScreen(
                     viewModel.onEvent(AddEditNoteEvent.ChangeContentFocus(it))
                 },
                 isHintVisible = contentState.isHintVisible,
-                textStyle = MaterialTheme.typography.h5,
+                textStyle = MaterialTheme.typography.body1,
                 modifier = Modifier.fillMaxHeight()
             )
         }
     }
-
 }

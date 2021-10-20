@@ -33,7 +33,7 @@ fun NoteItem(
     note: Note,
     modifier: Modifier = Modifier,
     cornerRadius: Dp = 10.dp,
-    cutCornerSize: Dp = 300.dp,
+    cutCornerSize: Dp = 30.dp,
     onDeleteClick: () -> Unit
 ) {
     Box(
@@ -47,6 +47,7 @@ fun NoteItem(
                 lineTo(0f, size.height)
                 close()
             }
+
             clipPath(clipPath) {
                 drawRoundRect(
                     color = Color(note.color),
@@ -91,7 +92,8 @@ fun NoteItem(
         ) {
             Icon(
                 imageVector = Icons.Default.Delete,
-                contentDescription = "Delete note"
+                contentDescription = "Delete note",
+                tint = MaterialTheme.colors.onSurface
             )
         }
     }
