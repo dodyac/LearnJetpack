@@ -168,7 +168,8 @@ fun VolumeBar(
             }
         }
     }
-}s
+}
+
 
 @ExperimentalComposeUiApi
 @Composable
