@@ -20,3 +20,12 @@ val LightGreen3 = Color(0xff11d79b)
 val BlueViolet1 = Color(0xffaeb4fd)
 val BlueViolet2 = Color(0xff9fa5fe)
 val BlueViolet3 = Color(0xff8f98fd)
+
+val DarkGray = Color(0xFF202020)
+val LightBlue = Color(0xFFD7E8DE)
+
+val RedOrange = Color(0xffffab91)
+val RedPink = Color(0xfff48fb1)
+val BabyBlue = Color(0xff81deea)
+val Violet = Color(0xffcf94da)
+val LightGreen = Color(0xffe7ed9b)

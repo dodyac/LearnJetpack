@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">LearnJetpack</string>
     <string name="title_activity_meditation_ui">MeditationUI</string>
+    <string name="title_activity_note_app">NoteApp</string>
 </resources>

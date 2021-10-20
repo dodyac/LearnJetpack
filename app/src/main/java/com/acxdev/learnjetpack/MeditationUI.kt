@@ -1,6 +1,5 @@
 package com.acxdev.learnjetpack
 
-import android.icu.number.Scale
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -20,14 +19,14 @@ import androidx.compose.ui.graphics.DefaultAlpha
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
-import com.acxdev.learnjetpack.ui.theme.MeditationUITheme
+import com.acxdev.learnjetpack.ui.theme.LearnJetPackTheme
 
 @ExperimentalFoundationApi
 class MeditationUI : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MeditationUITheme {
+            LearnJetPackTheme {
 //                HomeScreen()
             }
             ImageWithBackground(
