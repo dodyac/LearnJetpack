@@ -4,7 +4,6 @@ import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Path
 import kotlin.math.abs
 
-
 fun Path.standardQuadFromTo(
     from: Offset,
     to: Offset

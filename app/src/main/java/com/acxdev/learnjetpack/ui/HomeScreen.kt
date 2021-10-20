@@ -1,4 +1,4 @@
-package com.acxdev.learnjetpack
+package com.acxdev.learnjetpack.ui
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -36,6 +36,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.acxdev.learnjetpack.BottomMenuContent
+import com.acxdev.learnjetpack.Feature
+import com.acxdev.learnjetpack.R
+import com.acxdev.learnjetpack.standardQuadFromTo
 import com.acxdev.learnjetpack.ui.theme.AquaBlue
 import com.acxdev.learnjetpack.ui.theme.Beige1
 import com.acxdev.learnjetpack.ui.theme.Beige2
@@ -65,7 +69,15 @@ fun HomeScreen() {
     ) {
         Column {
             GreetingSection()
-            ChipSection(chips = listOf("Sweet sleep", "Insomnia", "Depression", "Depression", "Depression"))
+            ChipSection(
+                chips = listOf(
+                    "Sweet sleep",
+                    "Insomnia",
+                    "Depression",
+                    "Depression",
+                    "Depression"
+                )
+            )
             CurrentMeditation()
             FeaturedSection(
                 feature = listOf(
